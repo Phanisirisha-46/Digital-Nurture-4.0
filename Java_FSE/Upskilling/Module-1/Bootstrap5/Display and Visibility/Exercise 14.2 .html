@@ -1,0 +1,51 @@
+
+<!-- EExercise 14.2:
+Create a responsive sidebar that only shows on tablets and above -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Sidebar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar: Hidden on small, shown on md+ -->
+      <nav class="col-md-3 col-lg-2 bg-light d-none d-md-block sidebar py-4">
+        <h4 class="text-center mb-4"> Sidebar</h4>
+        <ul class="nav flex-column px-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Analytics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main content -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+        <h2>Main Content Area</h2>
+        <p>This content is always visible. The sidebar appears only on tablets and larger screens.</p>
+      </main>
+    </div>
+  </div>
+
+  <style>
+    .sidebar {
+      min-height: 100vh;
+      border-right: 1px solid #ddd;
+    }
+  </style>
+</body>
+</html>
+

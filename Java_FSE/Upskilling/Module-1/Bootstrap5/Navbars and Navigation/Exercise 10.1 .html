@@ -1,0 +1,56 @@
+<!-- Exercise 10.1:
+Create a responsive navbar with logo, navigation links, and a search form.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="data:image/jpeg;base64,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" alt="Logo" class="me-2">MySite
+      </a>
+
+      <!-- Toggler for mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar content -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <!-- Nav links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+
+        <!-- Search form -->
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
